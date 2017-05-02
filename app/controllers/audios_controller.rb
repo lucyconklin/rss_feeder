@@ -6,14 +6,8 @@ class AudiosController < ApplicationController
   end
 
   def create
-    @audio = Audio.new(audio_params)
-    byebug
-    if @audio.save
-      #do something
-    else
-      @errors = @audio.errors.full_messages
-      #show an error
-    end
+    AudioService.new(audio_params)
+    redirect_to root_path
   end
 
   private
