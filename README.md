@@ -13,6 +13,12 @@ Bundle
 ```
 bundle install
 ```
+Set up your database, migrate, and load schema
+```
+rails db:create
+rails db:migrate
+rails db:schema:load
+```
 Run the tests to make sure everything is working properly
 ```
 rspec

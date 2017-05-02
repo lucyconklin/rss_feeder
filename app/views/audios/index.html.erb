@@ -1,0 +1,16 @@
+<h1>RSS Feeder</h1>
+
+<%= form_for @audio do |f| %>
+  <%= f.label :url %>:
+  <%= f.url_field :url %>
+
+  <%= f.label :date %>:
+  <%= f.text_field :date %>
+<% end %>
+
+<section class="audio-list">
+  <% @audios.each do |audio| %>
+    <h4><%= audio.title %></h4>
+    <p><%= audio.date %></p>
+  <% end %>
+</section>
