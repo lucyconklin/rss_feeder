@@ -12,7 +12,9 @@
 
 <section class="audio-list">
   <% @audios.each do |audio| %>
-    <h4><%= audio.title %></h4>
-    <p><%= audio.date %></p>
+    <div class="audio-element">
+      <h4><%= audio.title %></h4>
+      <p><%= audio.date %></p>
+    </div>
   <% end %>
 </section>
